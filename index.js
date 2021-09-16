@@ -5,7 +5,7 @@ client.commands = new Discord.Collection();
 prefix = "!";
 
 client.on("message", message => {
-  if (message.author.bot) return;
+  if(message.author.bot){ return false };
 
 client.on('message', message => {
   if(message.author.bot){ return false };
