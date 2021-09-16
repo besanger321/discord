@@ -6,6 +6,11 @@ prefix = "!"
 client.on("message", message => {
   if (message.author.bot) return;
 
+client.on('message', message => {
+  if(message.author.bot) return;
+  if(message.channel.type==="dm"||message.channel.type==="group") return message.channel.send("Je ne peux vous répondre.");
+});
+
   let content = message.content.split(" ");
   let command = content[0];
   let args = content.slice(1);
@@ -21,10 +26,6 @@ client.on("message", message => {
   }
 });
 
-client.on('message', message => {
-  if(message.author.bot) return;
-  if(message.channel.type==="dm"||message.channel.type==="group") return message.channel.send("Je ne peux vous répondre.");
-});
   
 client.once('ready', () => {
 	console.log('Ready!');
