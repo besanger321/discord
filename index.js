@@ -15,7 +15,8 @@ client.on('message', message => {
   let content = message.content.split(" ");
   let command = content[0];
   let args = content.slice(1);
-
+  if(message.author.bot) return;
+  if(message.channel.type==="dm"||message.channel.type==="group"){return false};
   if (message.content.startsWith(prefix)) {
       try {
           let commandFile = require(`./commands/${command.slice(prefix.length)}.js`)
