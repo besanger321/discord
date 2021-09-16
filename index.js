@@ -9,7 +9,7 @@ client.on("message", message => {
 
 client.on('message', message => {
   if(message.author.bot) return;
-  if(message.channel.type==="dm"||message.channel.type==="group") return message.channel.send("Je ne peux vous répondre.");
+  if(message.channel.type==="dm"||message.channel.type==="group") return;
 });
 
   let content = message.content.split(" ");
