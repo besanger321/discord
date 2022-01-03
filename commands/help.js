@@ -3,7 +3,8 @@ module.exports = {
 	description: 'ping serveur',
 	execute(client, message, args) {
             const timetTaken = Date.now() - message.createdTimestamp;
-            message.channel.send(`> !ping test de latence
+            message.channel.send(`Liste des commandes du bot
+            > !ping test de latence
             > !clear effacer 6 messages
             > !kick virer une personne
             > !ban pour bannir une personne
