@@ -6,7 +6,7 @@ module.exports = {
         if(!message.mentions.users.first()) return message.channel.send("mention inexistante ou éroner");
         const user = message.mentions.users.first();
          const member = message.guild.member(user);
-         if(member.roles.cache.has("768550301720379422")) return member.roles.remove('768550301720379422');
+         if(member.roles.cache.has("768550301720379422")){member.roles.remove('768550301720379422'); return message.channel.send("tu n'a pas les permissions");}
          message.channel.send(`${user.tag} n'a pas de warn actif`);
          console.log(`${user.tag}a été Unwarn par ${message.author.tag}`) 
     }
